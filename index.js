@@ -3,15 +3,15 @@ function calculateTax(amount) {
   return amount * 0.1;
 }
 
-console.log(calculateTax(100)); // 10
+console.log(calculateTax(100)); 
 
 
 // 2. Convert to Uppercase
-function convertUppercase(text) {
+function convertToUpperCase(text) {
   return text.toUpperCase();
 }
 
-console.log(convertUppercase("hello world")); // HELLO WORLD
+console.log(convertToUpperCase("hello world")); 
 
 
 // 3. Find Maximum Number
@@ -25,7 +25,7 @@ function findmaximum(num1, num2) {
   }
 }
 
-console.log(findmaximum(50, 30)); // 50
+console.log(findmaximum(50, 30)); 
 
 
 // 4. Check Palindrome
@@ -33,25 +33,22 @@ function isPalindrome(word) {
   return word === word.split('').reverse().join('');
 }
 
-console.log(isPalindrome("racecar")); // true
-console.log(isPalindrome("stop"));    // false
+console.log(isPalindrome("racecar")); 
+console.log(isPalindrome("stop"));    
 
 
 // 5. Calculate Discounted Price
 function calculatediscountedPrice(originalPrice, discountPercentage) {
-  if (discountPercentage > 100) {
-    return "Invalid discount";
-  }
-
+  
   const discountAmount = (originalPrice * discountPercentage) / 100;
   return originalPrice - discountAmount;
 }
 
-console.log(calculatediscountedPrice(100, 40)); // 60
+console.log(calculatediscountedPrice(100, 20)); 
 
 
 
 
 
 // This is required for the test to function properly  
-module.exports = { calculateTax, convertUppercase, findmaximum , isPalindrome, calculatediscountedPrice };
+module.exports = { calculateTax, convertToUpperCase, findmaximum , isPalindrome, calculatediscountedPrice };
