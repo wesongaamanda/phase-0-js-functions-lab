@@ -1,47 +1,53 @@
-function calculateTax(amount){
-  return amount * 0.1
-
+// 1. Calculate Tax
+function calculateTax(amount) {
+  return amount * 0.1;
 }
-calculateTax(100) 
-console.log(calculateTax(100));
+
+console.log(calculateTax(100)); // 10
 
 
+// 2. Convert to Uppercase
 function convertUppercase(text) {
-    return text.toUpperCase()  
-
+  return text.toUpperCase();
 }
-convertUppercase("hello world")
-console.log(convertUppercase("hello world"))    
+
+console.log(convertUppercase("hello world")); // HELLO WORLD
 
 
+// 3. Find Maximum Number
 function findmaximum(num1, num2) {
-    if (num1 > num2) {
-        return num1
-    } else if (num2 > num1) {
-        return num2
-    } else {
-        return "These numbers are the same"
-    }
+  if (num1 > num2) {
+    return num1;
+  } else if (num2 > num1) {
+    return num2;
+  } else {
+    return "Numbers are equal";
+  }
 }
 
-console.log(findmaximum(50, 30));
+console.log(findmaximum(50, 30)); // 50
 
 
-function isPalindrome(next) {
-  return next === next.split ('').reverse().join('');
+// 4. Check Palindrome
+function isPalindrome(word) {
+  return word === word.split('').reverse().join('');
 }
-isPalindrome('');
-console.log(isPalindrome('racecar'));
-console.log(isPalindrome('stop'));
+
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("stop"));    // false
 
 
-function calculatediscountedPrice(originalprice, discountpercentage) {
-  const discountAmount = (originalprice * discountpercentage) / 100;
-  const discountedPrice = originalprice - discountAmount;
-  return discountedPrice;
+// 5. Calculate Discounted Price
+function calculatediscountedPrice(originalPrice, discountPercentage) {
+  if (discountPercentage > 100) {
+    return "Invalid discount";
+  }
+
+  const discountAmount = (originalPrice * discountPercentage) / 100;
+  return originalPrice - discountAmount;
 }
-calculatediscountedPrice(100, 400);
-console.log(calculatediscountedPrice(100, 40));
+
+console.log(calculatediscountedPrice(100, 40)); // 60
 
 
 
